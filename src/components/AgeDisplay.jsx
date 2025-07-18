@@ -1,5 +1,5 @@
 import React from "react";
-import { calculateAge } from "../calculateAge";
+import { calculateAge } from "../util/calculateAge";
 
 function AgeDisplay({ day, month, year }) {
     const { years, months, days } = calculateAge(day, month, year);
