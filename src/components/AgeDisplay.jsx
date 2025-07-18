@@ -2,7 +2,14 @@ import React from "react";
 import { calculateAge } from "../util/calculateAge";
 
 function AgeDisplay({ day, month, year }) {
-    const { years, months, days } = calculateAge(day, month, year);
+    let years = 0, months = 0, days = 0;
+
+    if (day && month && year) {
+        const age = calculateAge(day, month, year);
+        years = age.years;
+        months = age.months;
+        days = age.days;
+    }
 
     return (
         <div>
